@@ -1,0 +1,6 @@
+fastapi
+httpx
+pytest
+pytest-allure
+allure-pytest
+loguru
