@@ -2,11 +2,11 @@ from src.api.client import APIClient
 from src.utils.logger import get_logger
 import pytest
 
-logger = get_logger()
+logger = get_logger(__name__)
 
 @pytest.fixture(scope="module")
 def api_client():
-    client = APIClient()
+    client = APIClient(base_url="http://localhost:8000")  # Replace with actual base URL
     yield client
 
 def test_example_endpoint(api_client):
